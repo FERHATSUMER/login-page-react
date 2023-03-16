@@ -1,9 +1,47 @@
-
-.login-form{
-    padding-top: 150px;
+.container {
+    background-image: url(https://www.publicdomainpictures.net/pictures/270000/nahled/paper-creased-crumpled-background.jpg);
+    height: 700px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.input{
+.navbar {
+    display: flex;
+    padding: 10px;
+    width: 1550px;
+    height: 70px;
+    background: rgba(27, 27, 27, 0.8);
+    color: #fff;
+}
+
+.title {
+    display: flex;
+    position: absolute;
+    right: 7px;
+    gap: 15px;
+}
+
+.login-form {
+    position: absolute;
+    height: 400px;
+    left: 450px;
+    top: 244px;
+    background: rgba(37, 37, 37, 0.45);
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    border-radius: 12px;
+    margin: auto;
+    width: 40rem;
+    padding-top: 17px;
+}
+h1{
+    color: #fff;
+}
+
+
+.input {
     width: 200px;
     height: 60px;
 }

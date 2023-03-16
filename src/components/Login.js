@@ -1,24 +1,31 @@
 import "./login.css";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input } from "antd";
-import { useRef } from "react";
 
 export default function Login() {
- const emailRef=useRef()
- const passwordRef=useRef()
- 
- 
-    const onFinish = (values) => {
+  const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
   return (
-    <div>
+    <div className="container">
+      <div className="navbar">
+        <div className="title">
+          <h3>
+            <HomeOutlined /> Home
+          </h3>
+          <h3>
+            <UserOutlined /> Sing In{" "}
+          </h3>
+        </div>
+      </div>
+
       <Form
         name="normal_login"
         className="login-form"
         initialValues={{ remember: true }}
         onFinish={onFinish}
       >
+        <h1 >LOGIN</h1>
         <Form.Item
           name="username"
           rules={[{ required: true, message: "Please input your Username!" }]}
@@ -26,7 +33,7 @@ export default function Login() {
           <Input
             className="input"
             prefix={<UserOutlined className="site-form-item-icon" />}
-            placeholder="e-mail" ref={emailRef}
+            placeholder="e-mail"
           />
         </Form.Item>
         <Form.Item
@@ -37,7 +44,7 @@ export default function Login() {
             className="input"
             prefix={<LockOutlined className="site-form-item-icon" />}
             type="password"
-            placeholder="Password" ref={passwordRef}
+            placeholder="Password"
           />
         </Form.Item>
         <Form.Item>
